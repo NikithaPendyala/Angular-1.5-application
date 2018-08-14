@@ -1,0 +1,28 @@
+
+<table border='1'>
+			<tr>
+				<th>S.no</th>
+				<th>Username</th>
+				<th>Password</th>
+				<th>Email</th>
+				<th>Usertype</th>
+				<th>Gender</th>
+				<th>location</th>
+			</tr>
+			<tr ng-repeat="userdetail in users |filter:filter_key track by $index ">
+				<td>{{$index}}</td>
+				<td>{{userdetail.Username}}</td>
+				<td>{{userdetail.Password}}</td>
+				<td>{{userdetail.Email}}</td>
+				<td>{{userdetail.Usertype}}</td>
+				<td>{{userdetail.Gender}}</td>
+				<td>{{userdetail.Location}}</td>
+				<td><input type="button" value="delete" ng-click="delete(userdetail)"></td>
+			</tr>
+			<tr>
+				<td colspan="7">
+					<input type="text" ng-model="filter_key">
+				</td>
+			<tr>
+</table>
+	
